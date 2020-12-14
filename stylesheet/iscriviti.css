@@ -1,0 +1,44 @@
+body{font-family: calibri, Helvetica, sans-serif;
+  background-image: url("../img/sfondologin.jpg");
+  background-repeat:  no-repeat; margin:0 auto;
+  background-size: 100%; background-attachment:fixed;
+  overflow-x: hidden; min-width:300px; max-width:2500px;
+}
+
+#main {
+  background: rgba(255,255,255,0.8);
+  height:auto;
+  width:450px;
+  margin:0 auto;
+  margin-top:auto;
+  border:solid 1px #0771C3;
+  border-radius: 20px;
+  text-align:center;
+}
+
+#logo{width:50%;}
+
+#container{position: relative; font-size:15px;}
+
+.inserisci_informazione{margin-left:10px; font-weight:bold; margin-top:7px; }
+
+.sceglitipo{padding-right:20px;padding-left:5px; height:20px; border-radius:30px;}
+
+#informazioni_cons{width:80%; margin:0 auto; text-align:left; display:block;}
+#informazioni_vend{width:80%; margin:0 auto; text-align:left; display:none;}
+#seleziona{padding-left:5px; margin-top:10px; margin-left:20px;}
+#datanascita{margin-top:10px; margin-left:60px;}
+#utilizzodeidati{font-size:13px; color:#777; text-align:justify; }
+#utilizzodeidati a{color:#0771C3;}
+.preferiti{margin-left:20px; margin-top:7px; margin-right:10px;}
+
+.scrivi{width: 100%; margin-top:7px; background:none; border-style:none none solid none; border-color:#0771C3;}
+
+#subscribebutton{background-color: #fff; font-size:17px; padding:10px 20px 10px 20px;
+                  border-radius:30px; border-color:#0771C3; margin-bottom:10px;  color:#0771C3; transition: background-color 0.6s;}
+
+#subscribebutton:hover{background-color:#0771C3; border-color:#0771C3; color:white;}
+
+.registrato {position:relative; font-size:13px; bottom:15px;}
+.linklogin {text-decoration: none; color: #0771C3; transition: font-size 0.5s;}
+.linklogin:hover {font-size:15px;}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search&Buy">
+  <meta name="author" content="Gallaoui Mohamed Yassine">
+  <link rel="icon" href="img/logo.png">
+  <title>Search & Buy</title>
+  <link href="stylesheet/datipersonali.css" rel="stylesheet">
+  <script type="text/javascript" src="js/datiPersonali.js"></script>
+  <script type="text/javascript" src="js/carrello.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="caricaDatiPersonali()">
+  <div id="header">
+    <a href="index.html"><img src="img/scritta.png" id="logocentrale"></a>
+  </div>
+
+  <div id="menu">
+    <ul id="barramenu">
+      <li class="mainbar destra" id="togli_logout"> <a href="login.html" class="link_menu"  onClick="logout()">Logout <img src="img/logout.png" id="iconalogout"></a></li>
+      <li class="mainbar destra" id="togli_account"> <a href="datipersonali.html" class="link_menu"><span id="nomeclient"></span><img src="img/user.png" id="iconautente"></a></li>
+      <li class="mainbar destra" id="togli_carrello"> <a href="carrello.html" class="link_menu">Carrello<img src="img/cart.png" id="icona1carrello"></a> </li>
+      <li class="mainbar destra" id="togli_acquisti"> <a href="acquisti.html" class="link_menu">Acquisti<img src="img/bag.png" id="iconabag"></a> </li>
+      <li class="mainbar destra" id="togli_vendi"> <a href="vendi.html" class="link_menu">Vendi<img src="img/vendi.png" id="iconavendi"></a> </li>
+      <li class="mainbar destra" id="togli_login"> <a href="login.html" class="link_menu">Login<img src="img/login.png" id="iconalogin"></a> </li>
+    </ul>
+    <div id="searchdiv">
+      <input id="barraricerca" type="text" placeholder="Search a product"  onkeyup="ricerca()">
+      <button id="bottone_ricerca">
+        <img src="img/icon_search.png" id="immagine_cerca">
+      </button>
+    </div>
+  </div>
+
+
+
+  <div id="corpo">
+    <div id="cliente">
+      <div id="infoc">
+        Tipo di utente: <span id="tipoc"></span><br>
+        Nome: <span id="nomec"></span><br>
+        Cognome: <span id="cognomec"></span><br>
+        Data di nascita: <span id="datanascitac"></span><br>
+        Numero di telefono: <span id="telefonoc"></span><br>
+        Email: <span id="mailc"></span><br>
+        Username: <span id="usernamec"></span><br>
+        Preferenze: <span id="preferenzec"></span><br>
+        Tipologia pagamento predefinita: <span id="pagamentic"></span><br>
+        <div class="contenitorebottone"><button onclick="formModificaDatic()" id="tastomodificac">Modifica dati</button></div>
+      </div>
+      <div id="modifica_infoc">
+        Numero di telefono: <input id="cambiatelc" type="tel" pattern="[0-9]{10}" title="Inserisci un numero di telefono valido"></input><br>
+        Email: <input id="cambiamailc" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Inserisci una mail valida"></input><br>
+        Username:  <input id="cambiausernamec" type="text" pattern="[A-Za-z0-9]{1,20}" title="Inserisci il tuo username"></input><br>
+        Preferenze: <div id="cambiapreferenzec"><input type="checkbox"  value="elettronica" id="ele1">Elettronica
+          <input type="checkbox" value="elettrodomestici" id="ele2">Elettrodomestici
+          <input type="checkbox" value="cancelleria" id="canc">Cancelleria
+          <input type="checkbox"  value="giocattoli" id="toys">Giocattoli
+          <input type="checkbox"  value="fitness" id="fit">Fitness<br>
+          <input type="checkbox"  value="elimina" id="elimina">---Elimina tutte le tue preferenze---
+        </div>
+        Tipologia pagamento predefinita:
+          <select id="cambiapagamentic" required>
+            <option value="credito">Carta di credito</option>
+            <option value="prepagata">Carta prepagata</option>
+            <option value="debito">Carte di debito</option>
+          </select>
+          <div class="contenitorebottone2"><button onclick="formConfermaModifichec()" id="tastosalvamodificac">Conferma dati</button></div>
+        </div>
+      </div>
+      <div id="venditore">
+        <div id="infov">
+          Tipo di utente: <span id="tipov"></span><br>
+          Nome: <span id="nomev"></span><br>
+          Cognome: <span id="cognomev"></span><br>
+          Data di nascita: <span id="datanascitav"></span><br>
+          Numero di telefono: <span id="telefonov"></span><br>
+          Email: <span id="mailv"></span><br>
+          Username: <span id="usernamev"></span><br>
+          Tipo di attività: <span id="attivitav"></span><br>
+          Partita IVA: <span id="ivav"></span><br>
+          <div class="contenitorebottone"><button onclick="formModificaDativ()" id="tastomodificav">Modifica dati</button></div>
+        </div>
+        <div id="modifica_infov">
+          Numero di telefono: <input id="cambiatelefonov" type="tel" pattern="[0-9]{10}" title="Inserisci un numero di telefono valido"></input><br>
+          Email: <input id="cambiamailv" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"></input><br>
+          Username: <input id="cambiausernamev" type="text" pattern="[A-Za-z0-9]{1,20}" title="Inserisci il tuo username"></input><br>
+          Tipo di attività: <input id="cambiaattivitav" type="text" pattern="[A-Za-z ]{1,20}" title="Inserisci la tua attività"></input><br>
+          Partita IVA: <input id="cambiaivav" type="text" pattern="[0-9]{11}" title="Inserisci la tua partita IVA"></input><br>
+          <div class="contenitorebottone2"><button onclick="formConfermaModifichev()" id="tastosalvamodificav">Conferma dati</button></div>
+        </div>
+      </div>
+      <div id="eliminautente">
+        <button id="deleteAcc" onclick="deleteAccount()">Elimina account</account>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="sezione_footer">
+        <span class="footergrassetto">Guadagna con Search&Buy</span><br><br>
+        Vendi su Search&Buy<br>
+        Vendi su Search&Buy Business<br>
+        Vendi su Search&Buy Handmade<br>
+        Diventa affiliato<br>
+        Logistica di Search&Buy<br>
+        Pubblica con noi da indipendente<br>
+        Promuovi i tuoi prodotti<br>
+        Tutti i servizi<br>
+      </div>
+      <div class="sezione_footer">
+        <span class="footergrassetto">Metodi di pagamento Search&Buy</span><br><br>
+        Metodi di pagamento<br>
+        Convertitore di Valuta Search&Buy<br>
+        Buoni Regalo<br>
+        Ricarica online<br>
+        Ricarica in cassa<br>
+      </div>
+      <div class="sezione_footer">
+        <span class="footergrassetto">Legal</span><br><br>
+        Condizioni generali di uso e vendita<br>
+        Informativa sulla privacy<br>
+        Area legaleCookie<br>
+        Pubblicità definita in base agli interessi<br>
+      </div>
+      <div id="copyright">&copy; Search & Buy, Inc e società affiliate</div>
+    </div>
+
+  </body>
+
+  </html>

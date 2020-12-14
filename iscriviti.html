@@ -1,0 +1,117 @@
+	<!DOCTYPE html>
+	<html lang="it">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Search&Buy">
+		<meta name="author" content="Gallaoui Mohamed Yassine">
+		<link rel="icon" href="img/logo.png">
+		<title>Search & Buy - Iscriviti</title>
+		<link href="stylesheet/iscriviti.css" rel="stylesheet">
+		<script src="js/iscriviti.js"></script>
+	</head>
+
+		<body onload="selectCliente()">
+
+			<div id="main">
+				<form name="modulo">
+					<a href="index.html"><img src="img/logo.png" id="logo"></a>
+
+					<div id="container">
+						<span class="registrato">Sei già registrato? <a href="login.html" class="linklogin">Fai il login!</a></span>
+						<br>
+						<form>
+							<b>Tipo di utente</b>
+							<br><br>
+							<input type="radio" name="tipo_utente" onChange="cons()" id="consum" value="Consumatore">
+							<label for="consum" class="sceglitipo">Cliente</label>
+							<input type="radio" name="tipo_utente" onChange="vend()" id="vendit" value="Venditore">
+							<label for="vendit" class="sceglitipo">Venditore</label>
+						</form>
+
+						<br><br><br>
+
+						<div id="informazioni_cons">
+							<label class="inserisci_informazione">Nome</label>
+							<input type="text" pattern="[A-Za-z ]{1,20}" required class="scrivi" id="nomec" title="Inserisci il tuo nome"><br><br>
+							<label class="inserisci_informazione">Cognome</label>
+							<input type="text" pattern="[A-Za-z ]{1,20}" required class="scrivi" id="cognomec" title="Inserisci un cognome valido"><br><br>
+							<label class="inserisci_informazione">Data di nascita</label>
+							<input type="date" max="2001-03-11" name="datanascita" required id="datanascitac" title="Inserisci la tua data di nascita. ATTENZIONE! Per poter usare questo sito devi avere almeno 18 anni!"><br><br>
+							<label class="inserisci_informazione">E-mail</label>
+							<input type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"required class="scrivi" id="emailc" title="Inserisci una mail valida"><br><br>
+							<label class="inserisci_informazione">Numero telefono</label>
+							<input type="tel" pattern="[0-9]{10}" required class="scrivi" id="telefonoc" title="Inserisci un numero di telefono valido"><br><br>
+							<label class="inserisci_informazione">Username</label>
+							<input type="text" pattern="[A-Za-z0-9]{1,20}" required class="scrivi" id="usernamec" title="Inserisci il tuo username" onblur="verificaUsername()"><br><br>
+							<label class="inserisci_informazione">Reparti preferiti</label><br>
+							<!-- qua ci va la scelta dei reparti preferiti-->
+							  <input type="checkbox" class="preferiti" id="ele1">Elettronica
+							<br>
+							  <input type="checkbox" class="preferiti" id="ele2">Elettrodomestici
+							<br>
+							  <input type="checkbox" class="preferiti" id="canc">Cancelleria
+							<br>
+							  <input type="checkbox" class="preferiti" id="gioc">Giocattoli
+							<br>
+							  <input type="checkbox" class="preferiti" id="fit">Fitness
+							<br><br>
+							<label class="inserisci_informazione">Inserisci la password</label>
+							<input type="password" pattern=".{6,}" title="Sei o più caratteri" required  class="scrivi" id="pass1c">
+							<br><br>
+							<label class="inserisci_informazione">Ripeti la password</label>
+							<input type="password" required class="scrivi" id="pass2c" onblur="verificaripetipassword()"><br><br>
+							<label class="inserisci_informazione">Tipo di pagamento di default</label>
+							<select required id="seleziona">
+								<option value="credito">Carta di credito</option>
+								<option value="prepagata">Carta prepagata</option>
+								<option value="debito">Carte di debito</option>
+							</select>
+							<br><br><br>
+							<div id="utilizzodeidati">
+								Cliccando su Iscriviti, dichiari di aver letto e accetti integralmente le nostre <a target="_blank" href="Condizioni.pdf">Condizioni generali di uso e vendita</a>. Prendi visione della nostra <a target="_blank" href="InformativaPrivacy.pdf">Informativa sulla privacy</a>, della nostra <a target="_blank" href="Cookie.pdf">Informativa sui Cookie</a> e della nostra <a target="_blank" href="Pubblicita.pdf">Informativa sulla Pubblicità</a> definita in base agli interessi.
+							</div>
+						</div>
+						<div id="informazioni_vend">
+							<label class="inserisci_informazione">Nome</label>
+							<input type="text" pattern="[A-Za-z ]{1,20}" required class="scrivi" id="nomev" title="Inserisci il tuo nome"><br><br>
+							<label class="inserisci_informazione">Cognome</label>
+							<input type="text" pattern="[A-Za-z ]{1,20}" required class="scrivi" id="cognomev" title="Inserisci un cognome valido"><br><br>
+							<label class="inserisci_informazione">Data di nascita</label>
+							<input type="date" max="2001-03-11" name="datanascita"  id="datanascitav" required><br><br>
+							<label class="inserisci_informazione">Tipo attività</label>
+							<input type="text" pattern="[A-Za-z ]{1,20}" required class="scrivi" id="attivita" title="Inserisci la tua attività"><br><br>
+							<label class="inserisci_informazione">Partita IVA</label>
+							<input type="text" pattern="[0-9]{11}" required class="scrivi" id="partitaiva" title="Inserisci la tua partita IVA"><br><br>
+							<label class="inserisci_informazione">E-mail</label>
+							<input type="email" required  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" class="scrivi"  id="emailv" title="Inserisci una mail valida"><br><br>
+							<label class="inserisci_informazione">Numero telefono</label>
+							<input type="tel" pattern="[0-9]{10}" required class="scrivi" id="telefonov" title="Inserisci un numero di telefono valido"><br><br>
+							<label class="inserisci_informazione">Username</label>
+							<input type="text" pattern="[A-Za-z0-9]{1,20}" required class="scrivi" id="usernamev" title="Inserisci il tuo username" onblur="verificaUsername()"><br><br>
+							<label class="inserisci_informazione">Inserisci la password</label>
+							<input type="password" pattern=".{6,}" title="Sei o più caratteri" required  class="scrivi" id="pass1v">
+							<br><br>
+							<label class="inserisci_informazione">Ripeti la password</label>
+							<input type="password" required class="scrivi" id="pass2v" onblur="verificaripetipasswordvenditore()">
+							<br><br><br>
+
+							<div id="utilizzodeidati">
+								Cliccando su Iscriviti, dichiari di aver letto e accetti integralmente le nostre <a href="Condizioni.pdf">Condizioni generali di uso e vendita</a>. Prendi visione della nostra <a href="InformativaPrivacy.pdf">Informativa sulla privacy</a>, della nostra <a href="Cookie.pdf">Informativa sui Cookie</a> e della nostra <a href="Pubblicita.pdf">Informativa sulla Pubblicità</a> definita in base agli interessi.
+							</div>
+						</div>
+					</div>
+
+					<button id="subscribebutton" type="subscribebutton" onclick="registra()">Iscriviti</button>
+
+					<br><br>
+
+					<span class="registrato">Sei già registrato? <a href="login.html" class="linklogin">Fai il login!</a></span>
+					<br>
+					</div>
+				</form>
+			</div>
+		</body>
+
+	</html>

@@ -1,0 +1,33 @@
+body{font-family: calibri, Helvetica, sans-serif;
+  background-image: url("../img/sfondologin.jpg");
+  background-repeat:  no-repeat; margin:0 auto;
+  background-size: 100%; background-attachment:fixed;
+  overflow-x: hidden; min-width:300px; max-width:2500px;
+}
+
+#main {
+  background: rgba(255, 255, 255, 0.8);
+  width:450px;
+  height:auto;
+  margin:0 auto;
+  margin-top:100px;
+  border:solid 1px #0771C3;
+  border-radius: 20px;
+   text-align:center;
+}
+
+#logo{width:65%;}
+
+#container{position: relative; font-size:20px;}
+
+.inserisci{height:25px; font-size:12px; border-radius:8px; border:solid 1px grey; text-align:center;}
+::placeholder{font-size:10px; text-align:center;}
+
+#loginbutton{background-color: #fff; font-size:20px; padding:10px 20px 10px 20px;
+  border-radius:30px; border-color:#0771C3; color:#0771C3; transition: background-color 0.6s;}
+
+#loginbutton:hover{background-color:#0771C3; border-color:#0771C3; color:white;}
+
+#iscriviti{position:relative; font-size:13px; bottom:15px;}
+#linkiscrizione{text-decoration: none; color: #0771C3; transition: font-size 0.5s;}
+#linkiscrizione:hover { font-size:15px; }

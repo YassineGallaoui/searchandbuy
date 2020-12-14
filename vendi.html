@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Search&Buy">
+	<meta name="author" content="Gallaoui Mohamed Yassine">
+	<link rel="icon" href="img/logo.png">
+	<title>Search & Buy - Vendi</title>
+	<link href="stylesheet/vendi.css" rel="stylesheet">
+	<script type="text/javascript" src="js/dati.js"></script>
+	<script type="text/javascript" src="js/vendi.js"></script>
+</head>
+
+<body onload="settaNome()">
+	<div id="header">
+		<a href="index.html"><img src="img/scritta.png" id="logocentrale"></a>
+	</div>
+
+	<div id="menu">
+		<ul id="barramenu">
+			<li class="mainbar destra" id="togli_logout"> <a href="login.html" class="link_menu"  onClick="logout()">Logout <img src="img/logout.png" id="iconalogout"></a></li>
+			<li class="mainbar destra" id="togli_account"> <a href="datipersonali.html" class="link_menu"><span id="nomevend">Account</span><img src="img/user.png" id="iconautente"></a></li>
+			<li class="mainbar destra" id="togli_vendi"> <a href="vendi.html" class="link_menu">Vendi<img src="img/vendi.png" id="iconavendi"></a> </li>
+		</ul>
+	</div>
+
+
+	<div id="corpo">
+		<div id="contenitore">
+			<span id="titolo">Aggiungi prodotto</span><br><br>
+			<label class="inserisci_dati">Nome : </label>
+			<input type="text" required class="scrivi" id="nome" title="Inserisci il nome del prodotto" pattern="[a-zA-Z0-9 ]{1,100}"><br><br>
+			<label class="inserisci_dati">Prezzo : </label>
+			<input type="number" required pattern="[0-9]{0,5}" class="scrivi" id="prezzo" title="Inserisci il prezzo del prodotto"><br><br>
+			<label class="inserisci_dati">Categoria : </label>
+			<form>
+				<input type="radio" name="tipo_prodotto" class="category" id="ele1">Elettronica
+				<br>
+				<input type="radio" name="tipo_prodotto" class="category" id="ele2">Elettrodomestici
+				<br>
+				<input type="radio" name="tipo_prodotto" class="category" id="canc">Cancelleria
+				<br>
+				<input type="radio" name="tipo_prodotto" class="category" id="gioc">Giocattoli
+				<br>
+				<input type="radio" name="tipo_prodotto" class="category" id="fit">Fitness
+				<br><br>
+			</form>
+			<label class="inserisci_dati">URL dell'immagine : </label>
+			<input type="text" required class="scrivi" id="urlimg" title="Inserisci l'URL dell'immagine del prodotto"><br><br>
+			<label class="inserisci_dati">Quantità : </label>
+			<input type="number" pattern="[0-9]{1,100000}" required class="scrivi" id="quantita" title="Inserisci la quantità di pezzi disponibili del prodotto"><br><br>
+			<label class="inserisci_dati">Metodo di spedizione: </label>
+			<select required id="seleziona">
+				<option value="Poste">Poste italiane</option>
+				<option value="TNT">TNT Italia</option>
+				<option value="BRT">BRT Bartolini</option>
+			</select><br><br>
+			<label class="inserisci_dati">Descrizione : </label><br>
+			<textarea type="text" required class="scrivi" id="descrizione" title="Inserisci una descrizione del prodotto"></textarea><br><br>
+			<button id="aggiungi_button" onclick="registraProdotto()">Aggiungi prodotto !</button>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="sezione_footer">
+			<span class="footergrassetto">Guadagna con Search&Buy</span><br><br>
+			Vendi su Search&Buy<br>
+			Vendi su Search&Buy Business<br>
+			Vendi su Search&Buy Handmade<br>
+			Diventa affiliato<br>
+			Logistica di Search&Buy<br>
+			Pubblica con noi da indipendente<br>
+			Promuovi i tuoi prodotti<br>
+			Tutti i servizi<br>
+
+		</div>
+		<div class="sezione_footer">
+			<span class="footergrassetto">Metodi di pagamento Search&Buy</span><br><br>
+			Metodi di pagamento<br>
+			Convertitore di Valuta Search&Buy<br>
+			Buoni Regalo<br>
+			Ricarica online<br>
+			Ricarica in cassa<br>
+
+		</div>
+		<div class="sezione_footer">
+			<span class="footergrassetto">Legal</span><br><br>
+			Condizioni generali di uso e vendita<br>
+			Informativa sulla privacy<br>
+			Area legaleCookie<br>
+			Pubblicità definita in base agli interessi<br>
+
+		</div>
+		<div id="copyright">&copy; Search & Buy, Inc e società affiliate</div>
+	</div>
+
+</body>
+
+</html>

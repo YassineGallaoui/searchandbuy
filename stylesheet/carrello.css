@@ -1,0 +1,179 @@
+body {height:100%; width:100%; min-width:300px; max-width:2500px; margin:0 auto; margin-top:0px;
+font-family: calibri, Helvetica, sans-serif;}
+
+/*
+qua c'è il header
+*/
+
+#header {height:100px; background-color:#0771C3; width:100%; margin:0 auto; text-align: center; line-height:160px;}
+#logocentrale {position:relative; height: 70px;}
+
+@media only screen and (max-width: 700px) {
+      #header {height:60px; line-height:60px;}
+      #logocentrale {height: 40px; top:18%;}
+}
+
+/*
+qua inizia il menu sopra
+*/
+
+#menu {height:70px; background-color:#51a6e8; width:100%; font-size:16px; line-height:70px;}
+#barramenu {margin:0; list-style:none;}
+.mainbar {display:block; text-align:center; padding-left:15px; padding-right: 15px; width:auto;
+          border-left:dotted 1px #47b26b; transition: background-color 0.5s, letter-spacing 0.5s;
+            float:right;}
+.mainbar:hover {background-color:#0771C3; letter-spacing:1px;}
+.link_menu {text-decoration:none; color:black;}
+#icona1carrello {height:26px; position:relative; top:8px; left:4px;}
+#iconautente {height:26px; position:relative; top:8px; left:5px;}
+#iconalogout {height:26px; position:relative; top:7px; left:4px;}
+#iconabag {height:26px; position:relative; top:7px; left:4px;}
+#iconavendi {height:37px; position:relative; top:13px; left:7px;}
+
+@media only screen and (max-width: 700px) {
+      #menu {height:50px; font-size:14px; line-height:50px;}
+      .mainbar {padding-left:10px; padding-right: 10px;}
+      .mainbar:hover {background-color:#0771C3;}
+      #menu a{text-decoration:none; color:black;}
+      .destra{float:right;}
+      #icona1carrello {height:20px; position:relative; top:6px; left:4px;}
+      #iconautente {height:20px; position:relative; top:6px; left:3px;}
+      #iconalogout {height:20px; position:relative; top:6px; left:4px;}
+      #iconabag {height:20px; position:relative; top:6px; left:4px;}
+}
+
+@media only screen and (max-width: 400px) {
+      #menu {height:30px; font-size:9px; line-height:30px;}
+      .link_menu a{text-decoration:none; color:black; display: none;}
+      #icona1carrello {height:16px; position:relative; top:5px; left:4px;}
+      #iconautente {height:16px; position:relative; top:5px; left:3px;}
+      #iconalogout {height:16px; position:relative; top:5px; left:4px;}
+      #iconabag {height:16px; position:relative; top:5px; left:4px;}
+
+}
+
+/*
+qua inizia la barra di ricerca
+*/
+
+#searchdiv{text-align:center;}
+#barraricerca{width:20%; height:35px; border-radius:20px; border:solid 1px grey; text-align:center; transition: width 0.4s ease-in-out;}
+#barraricerca:focus {width: 40%;}
+#bottone_ricerca{height:100%; position:relative; left:-46px; border-radius:20px;
+                  background-color:#59b6ff; border:solid 1px grey; height:30px; top:4px;}
+#bottone_ricerca:hover {background-color:#008fff;}
+#immagine_cerca{height:20px; margin-top:1px;}
+
+@media only screen and (max-width: 700px) {
+      #searchdiv{height:40px; line-height:40px;}
+      #barraricerca{height:20px; margin-top:14px;}
+      #barraricerca:focus {width: 40%;}
+      #bottone_ricerca{height:20px; left:-38px; border-radius:20px; top:2px;}
+      #immagine_cerca{height:15px; margin-top:2px;}
+}
+
+@media only screen and (max-width: 400px) {
+      #searchdiv{height:25px; line-height:25px; font-size:12px;}
+      #barraricerca{height:15px; margin-top:6px;}
+      #bottone_ricerca{height:14px; left:-34px; border-radius:20px; top:2px;}
+      #immagine_cerca{position:relative; height:10px; margin-bottom:2px;}
+}
+
+
+/*
+qua inizia il corpo
+*/
+
+.prodotti_nel_carrello{height:100px; width:90%; background-color:#add1ed;
+              margin:0 auto; margin-top:25px; border-radius:10px; border:solid 2px #51a6e8;}
+.prodotti_nel_carrello img{height:90%; margin-left:1.5%; margin-top:6px; float:left;}
+.nome_prodotto {font-weight: bold; font-size:20px;}
+.descrizione_prodotto_in_carrello{float:left; height:100%; width:65%; overflow:hidden; margin-left:1.5%;}
+.prezzo_carrello{text-align:center; width:19%; float:right; font-weight: bold; height:100%;}
+.prezzo_numero{position:relative; top:19%;}
+.bottone_compra_singolo{position:relative; top:32%; padding:7px 35px 7px 35px;
+      min-width:90px; border-radius:20px; border:solid 1px #4d97af; background-color:#aed7e5;}
+.bottone_compra_singolo:hover{ background-color:#4d97af; cursor: pointer; color: white;}
+.riassunto{height:100px; width:90%; background-color:#7cafd6; font-weight: bold;
+              margin:0 auto; margin-top:25px; border-radius:10px; border:solid 2px #2f80bf;}
+.informazioni {float:left; width:47%; margin-left:1.5%; height:30%; text-align: center; margin-top:1%; }
+#bottoni{margin:0 auto; width:320px; margin-top:20px;}
+#bottone_compra_tutto {background-color: #4ec460; padding:7px 35px 7px 35px;
+                        border-radius:20px; border:solid 1px #238933;}
+#bottone_elimina_tutto {background-color: #ea8f6b; padding:7px 35px 7px 35px;
+                        border-radius:20px; border:solid 1px #ff2a00;}
+#bottone_elimina_tutto:hover {background-color: #ff2a00; cursor: pointer; color:white;}
+#bottone_compra_tutto:hover {background-color: #238933; cursor: pointer; color:white;}
+.rimuovi_elemento{position:relative; float:right; height:14px; width:14px; top:7px; right:7px;
+      margin-bottom:-14px; cursor:pointer;}
+
+@media only screen and (max-width: 800px) {
+  .descrizione_prodotto_in_carrello{width:60%; overflow:hidden; margin-left:1.5%;}
+}
+
+@media only screen and (max-width: 650px) {
+  .descrizione_prodotto_in_carrello{width:50%; overflow:hidden; margin-left:1.5%;}
+  .prezzo_carrello{width:25%;}
+}
+
+@media only screen and (max-width: 480px) {
+  .descrizione_prodotto_in_carrello{width:45%; overflow:hidden; margin-left:1.5%;}
+  .prezzo_carrello{width:25%;}
+}
+
+
+
+#corpo {position:relative; width:100%; min-height:200px; height: auto;}
+.contenitore_prodotto{width:25%; min-height:200px; min-width: 200px;
+                      float:left; margin-top:30px; text-decoration:none;}
+.prodotto {position: relative; background-color:#f2f2f2; width:85%; margin:0 auto;
+            border-radius:20px; box-shadow: 5px 10px 8px rgb(0,0,0, 0.1);
+            padding-top: 85%; -webkit-transition: background-color 2s; transition: background-colors 2s;}
+.prodotto:hover {background-color:#ffffff;  box-shadow: none;}
+.contenitore_testo {position:absolute; background-color:#3f89ff; width: 100%; bottom:0%;
+      height:43px; text-align:center; color:black; font-size:17px; border-radius:0px 0px 20px 20px;}
+.contenitore_testo div {height: 22px; overflow: hidden; text-overflow: ellipsis; font-weight:bold; }
+.contenitore_testo:hover {background-color:#96beff;}
+.contenitore_immagine {position:absolute; width:70%; margin:0 auto; top:2%;}
+.contenitore_immagine img {width:100%; max-height:250px;}
+#contenitoretitolo{font-size:25px; letter-spacing: -1px; width:100%; text-align:center;
+                  margin-top:30px; font-weight: bold;}
+
+@media only screen and (max-width: 700px) {
+      .contenitore_prodotto{min-height:150px; min-width: 150px; margin-top:30px;}
+      .contenitore_testo {height:30px; font-size:13px;}
+      .contenitore_testo div {height: 14px;}
+      .contenitore_immagine img {width:100%; max-height:150px;}
+}
+
+@media only screen and (max-width: 400px) {
+      .contenitore_prodotto{min-height:100px; min-width: 100px; margin-top:20px;}
+      .contenitore_testo {height:25px; font-size:12px;}
+      .contenitore_testo div {height:13px; font-weight:normal;}
+      .contenitore_immagine img {width:100%; max-height:100px;}
+}
+
+/*
+qua inizia il footer
+*/
+
+#footer{position:relative; top:40px; clear:both; width:100%;
+        height:290px; line-height:15px;  overflow: hidden; color:white;
+        background: linear-gradient(to bottom, #0161aa 1%,#001c33 100%);
+}
+.footergrassetto{position:relative; font-weight:bold; top:15x; letter-spacing:1px;}
+.sezione_footer{position:relative; width:30%; height:85%; margin-left:1.5%; margin-right:1.5%; line-height:20px;
+            float:left; border-radius:30px; text-align:left; padding-top:1%; padding-left:10%;margin-right:-11%;}
+#copyright{width:100%; height:15%; float:left; border-radius:30px; text-align:center; clear:both; font-weight:bold;}
+
+@media only screen and (max-width: 700px) {
+      #footer{height:270px; font-size:13px;}
+      .sezione_footer{height:85%; margin-top:10px; }
+      #copyright{width:100%; height:5%;float:left; border-radius:30px; text-align:center; clear:both;}
+}
+
+@media only screen and (max-width: 400px) {
+      #footer{height:260px; font-size:10px;}
+      .sezione_footer{height:90%; margin-top:10px; }
+      #copyright{width:100%; height:5%;float:left; border-radius:30px; margin-top:-10px; text-align:center; clear:both;}
+}

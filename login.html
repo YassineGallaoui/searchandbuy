@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search&Buy">
+    <meta name="author" content="Gallaoui Mohamed Yassine">
+    <link rel="icon" href="img/logo.png">
+    <title>Search & Buy - Login</title>
+    <link href="stylesheet/login.css" rel="stylesheet">
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+
+<body>
+
+  <div id="main">
+    <form method="post" >
+      <a href="index.html"><img src="img/logo.png" id="logo"></a>
+      <div id="container">
+        <br>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Inserisci Username" name="uname" required class="inserisci" id="user">
+        <br><br><br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Inserisci Password" name="psw" required class="inserisci" id="pass">
+        <br><br><br>
+        <button type="submit" id="loginbutton" onClick="verificaregistrazione()">Login</button>
+        <br><br>
+        <span id="iscriviti">Non sei ancora registrato?<a href="iscriviti.html" id="linkiscrizione">Iscriviti!</a></span>
+      </div>
+    </form>
+  </div>
+
+</body>
+
+</html>

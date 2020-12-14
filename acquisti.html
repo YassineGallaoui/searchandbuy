@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Search&Buy">
+	<meta name="author" content="Gallaoui Mohamed Yassine">
+	<link rel="icon" href="img/logo.png">
+	<title>Search & Buy</title>
+	<link href="stylesheet/acquisti.css" rel="stylesheet">
+	<script type="text/javascript" src="js/dati.js"></script>
+	<script type="text/javascript" src="js/acquisti.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="visualizzabag()">
+	<div id="header">
+		<a href="index.html"><img src="img/scritta.png" id="logocentrale"></a>
+	</div>
+
+	<div id="menu">
+		<ul id="barramenu">
+			<li class="mainbar destra" id="togli_logout"> <a href="login.html" class="link_menu"  onClick="logout()">Logout <img src="img/logout.png" id="iconalogout"></a></li>
+			<li class="mainbar destra" id="togli_account"> <a href="datipersonali.html" class="link_menu"><span id="nomeclient">Account</span><img src="img/user.png" id="iconautente"></a></li>
+			<li class="mainbar destra" id="togli_carrello"> <a href="carrello.html" class="link_menu">Carrello<img src="img/cart.png" id="icona1carrello"></a> </li>
+			<li class="mainbar destra" id="togli_acquisti"> <a href="acquisti.html" class="link_menu">Acquisti<img src="img/bag.png" id="iconabag"></a> </li>
+			<li class="mainbar destra" id="togli_login"> <a href="login.html" class="link_menu">Login<img src="img/login.png" id="iconalogout"></a> </li>
+		</ul>
+		<div id="searchdiv">
+			<input id="barraricerca" type="text" placeholder="Search a product"  onkeyup="ricerca()">
+			<button id="bottone_ricerca">
+				<img src="img/icon_search.png" id="immagine_cerca">
+			</button>
+		</div>
+	</div>
+
+	<div id="corpo">
+		<div class="riassunto">
+			<div class="informazioni">Numero totale articoli acquistati: <span id="numero_totale_acquisti"></span></div>
+			<div class="informazioni">Costo totale: <span id="costo_totale_acquisti"></span> €</div><br>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="sezione_footer">
+			<span class="footergrassetto">Guadagna con Search&Buy</span><br><br>
+			Vendi su Search&Buy<br>
+			Vendi su Search&Buy Business<br>
+			Vendi su Search&Buy Handmade<br>
+			Diventa affiliato<br>
+			Logistica di Search&Buy<br>
+			Pubblica con noi da indipendente<br>
+			Promuovi i tuoi prodotti<br>
+			Tutti i servizi<br>
+		</div>
+		<div class="sezione_footer">
+			<span class="footergrassetto">Metodi di pagamento Search&Buy</span><br><br>
+			Metodi di pagamento<br>
+			Convertitore di Valuta Search&Buy<br>
+			Buoni Regalo<br>
+			Ricarica online<br>
+			Ricarica in cassa<br>
+		</div>
+		<div class="sezione_footer">
+			<span class="footergrassetto">Legal</span><br><br>
+			Condizioni generali di uso e vendita<br>
+			Informativa sulla privacy<br>
+			Area legaleCookie<br>
+			Pubblicità definita in base agli interessi<br>
+		</div>
+		<div id="copyright">&copy; Search & Buy, Inc e società affiliate</div>
+	</div>
+
+</body>
+
+</html>
