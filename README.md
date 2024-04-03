@@ -1,3 +1,5 @@
+**Project no longer maintained**
+
 # Search & Buy
 
 ## Project Description
